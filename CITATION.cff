@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Si usa este código o estos datos, cite el manuscrito y los datos originales de BESIII (Phys. Rev. D 102, 112009)."
+title: "Dependencia energética de la sección eficaz dimuónica con datos de BESIII en 3.8-4.6 GeV: código y datos"
+authors:
+  - family-names: Gutierrez
+    given-names: Abraham H.
+license: MIT
+date-released: 2026-11-03
+# doi: AGREGAR el DOI de Zenodo al publicar el repositorio
