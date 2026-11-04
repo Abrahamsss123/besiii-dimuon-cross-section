@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_CSV = ROOT / "data" / "besiii_bcdr_133.csv"
 RESULTS = ROOT / "results"
 FIGS = ROOT / "figs"
-PAPER = ROOT / "paper"
+LATEX = RESULTS / "latex"          # macros y tablas LaTeX generadas (src/make_tex.py)
 
 # --- incertidumbres de los datos --------------------------------------------------------------------------
 PT_PER_NB = 46.722                       # escala vertical de la figura de BESIII (pt por nb), de figcal.py

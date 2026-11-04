@@ -1,7 +1,2 @@
 __pycache__/
 *.pyc
-paper/*.aux
-paper/*.log
-paper/*.out
-paper/p-*.png
-paper/log*.txt

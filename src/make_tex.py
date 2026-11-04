@@ -1,4 +1,4 @@
-"""PASO 6. Genera paper/numeros.tex (macros con TODAS las cifras del texto) y las tablas .tex a partir de results.json y del CSV.
+"""PASO 6. Genera results/latex/numeros.tex (macros con las cifras del análisis) y las tablas .tex a partir de results.json y del CSV.
 Uso: python3 src/make_tex.py"""
 import sys, json
 import numpy as np
@@ -7,7 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import besiii_model as bm, common
 
-OUT = str(common.PAPER); common.PAPER.mkdir(exist_ok=True)
+OUT = str(common.LATEX); common.LATEX.mkdir(parents=True, exist_ok=True)
 r = json.load(open(common.RESULTS / "results.json"))
 f = r["fits"]["all133"]
 

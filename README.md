@@ -20,16 +20,15 @@ Código y datos del manuscrito *"Dependencia energética de la sección eficaz d
 | `src/analysis.py` | **Paso 3 – Análisis**: ajuste de n, comparación con el modelo, escalera de modelos, contribución de cada resonancia, ISR/FSR/masa/polarización del vacío. Escribe `results/results.json`. |
 | `src/montecarlo.py` | **Paso 4 – Monte Carlo** (hipótesis nula n = 2 exacto): compara estimar α con el intercepto vs. con el pivote. Escribe `results/mc_toys.npz`. |
 | `src/figures.py` | **Paso 5** – Figuras 2–5 del manuscrito (`figs/`). |
-| `src/make_tex.py` | **Paso 6** – Genera `paper/numeros.tex` (todas las cifras del texto) y las tablas LaTeX. |
+| `src/make_tex.py` | **Paso 6** – Genera en `results/latex/` las cifras (`numeros.tex`) y las tablas LaTeX del análisis. |
 | `tests/check_results.py` | Comprueba que los resultados clave coinciden con los del manuscrito. |
-| `paper/` | Fuente LaTeX del manuscrito (`Manuscrito_RIF_AbrahamG_corregido.tex`) y los archivos que genera `make_tex.py`. |
 | `run_all.sh` | Ejecuta todo en orden. |
 
 ## Cómo reproducir
 
 ```bash
 pip install -r requirements.txt          # numpy, scipy, matplotlib, pymupdf
-# además: poppler-utils (pdftocairo) y, para compilar el manuscrito, una instalación de LaTeX (pdflatex)
+# además: poppler-utils (pdftocairo)
 
 # (a) Solo el análisis, con el CSV incluido (no necesita el PDF de BESIII):
 ./run_all.sh

@@ -16,11 +16,5 @@ fi
 echo "== Paso 3: análisis =="        ; python3 src/analysis.py
 echo "== Paso 4: Monte Carlo =="     ; python3 src/montecarlo.py
 echo "== Paso 5: figuras =="         ; python3 src/figures.py
-echo "== Paso 6: macros y tablas =="  ; python3 src/make_tex.py
+echo "== Paso 6: macros y tablas LaTeX =="  ; python3 src/make_tex.py
 echo "== Comprobación de resultados =="; python3 tests/check_results.py
-cp figs/*.pdf paper/
-if command -v pdflatex >/dev/null; then
-  echo "== Paso 7: compilar el manuscrito =="
-  (cd paper && for i in 1 2 3; do pdflatex -interaction=nonstopmode Manuscrito_RIF_AbrahamG_corregido.tex >/dev/null; done)
-  echo "PDF: paper/Manuscrito_RIF_AbrahamG_corregido.pdf"
-fi
